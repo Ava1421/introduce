@@ -13,7 +13,7 @@
     "vant": "^4.9.19",
     "vue": "^3.2.13",
     "vue-router": "4",
-    "vue-count-to": "1.0.13"
+    "vue3-count-to": "1.0.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
