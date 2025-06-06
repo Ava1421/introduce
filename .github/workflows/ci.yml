@@ -1,0 +1,40 @@
+name: CI
+ 
+on:
+  push:
+分支: [ main ]
+  pull_request:
+分支: [ main ]
+ 
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+ 
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # 使用你需要的 Node.js 版本
+        cache: 'pnpm' # 使用 pnpm 作为包管理器的缓存
+ 
+    - name: Install dependencies with pnpm
+      run: pnpm install
+ 
+    - name: Build project
+      run: pnpm run build # 根据你的项目配置，这可能是 `pnpm run build` 或其他命令
+ 
+    # 对于 Vue.js 或其他需要热重载的开发服务器，你可以在本地运行它并捕获输出，但 GitHub Actions 不直接支持“热重载”测试。
+    # 通常热重载在本地开发环境中进行，你可以通过以下步骤在 Actions 中启动开发服务器，但请注意这不是真正的“测试”。
+    # - name: Start development server and capture logs (for Vue.js)
+    #   run: |
+    #     pnpm run serve &> server.log & # 在后台启动开发服务器，并将输出重定向到日志文件
+    #     sleep 10 # 等待服务器启动（根据需要调整时间）
+    #     echo "Development server started."
+    #   env:
+    #     CI: true # 设置环境变量以避免可能的警告信息影响测试结果
+    # - name: Check logs for errors (example for Vue.js)
+    #   run: |
+    #     grep -q "error" server.log && exit 1 || exit 0 # 检查日志文件中的错误信息，如果有则失败
