@@ -16,3 +16,4 @@ jobs:
     - run: npm config set registry https://registry.npmmirror.com #把npm源设置为淘宝源
     - run: yarn install
     - run: pnpm install # 现在可以正常使用pnpm命令
+    - run: pnpm serve 
