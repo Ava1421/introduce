@@ -1,0 +1,156 @@
+.flex-box {
+  display: flex;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-left {
+  display: flex;
+  align-items: center;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-base {
+  display: flex;
+  align-items: baseline;
+}
+.flex-1 {
+  flex: 1;
+}
+// 超出省略号
+.line-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-4 {
+  margin-top: 4px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+.ml-12 {
+  margin-left: 12px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.ml-4 {
+  margin-left: 4px;
+}
+
+/*线条按钮*/
+.btn-line {
+  padding: 10px 16px; /* 设置按钮的内边距，上下为10px，左右为16px */
+  font-size: 16px; /* 设置字体大小为16px */
+  font-weight: 700; /* 设置字体加粗，权重为700 */
+  color: #333; /* 设置文字颜色为深灰色 */
+  letter-spacing: 4px; /* 设置字符间距为4px */
+  border: none; /* 去掉按钮的边框 */
+  outline-style: none; /* 去掉按钮的轮廓线 */
+  background-color: transparent; /* 设置按钮背景颜色为透明 */
+  cursor: pointer; /* 设置鼠标悬停时显示为指针 */
+  position: relative; /* 设置定位方式为相对定位 */
+  /* 设置文字颜色的过渡效果，持续时间为0.4秒，效果为线性 */
+  transition: color 0.4s linear;
+}
+
+.btn-line:before,
+.btn-line:after {
+  content: ""; /* 伪元素必须设置content属性 */
+  width: 0; /* 初始宽度为0 */
+  height: 2px; /* 设置高度为2px，形成线条效果 */
+  background-color: #1890ff; /* 设置背景颜色为粉红色 */
+  position: absolute; /* 设置定位方式为绝对定位 */
+  top: 0; /* 顶部对齐，为上面的线条设置位置 */
+  left: 0; /* 左侧对齐，为上面的线条设置初始位置 */
+  /* 设置宽度的过渡效果，持续时间为0.4秒，效果为线性 */
+  transition: width 0.4s linear;
+}
+
+.btn-line:after {
+  top: auto; /* 取消顶部对齐，为下面的线条设置位置 */
+  left: auto; /* 取消左侧对齐，为下面的线条设置位置 */
+  bottom: 0; /* 底部对齐，为下面的线条设置位置 */
+  right: 0; /* 右侧对齐，为下面的线条设置初始位置 */
+}
+
+.btn-line:hover:before,
+.btn-line:hover:after {
+  width: 100%; /* 鼠标悬停时，伪元素的宽度变为100%，形成线条滑动效果 */
+}
+
+.btn-line:hover {
+  color: #1890ff; /* 鼠标悬停时，按钮文字颜色变为稍深的粉红色 */
+  /* 添加文字阴影效果，增强视觉层次感 */
+  text-shadow: 0 4px 10px rgba(48, 114, 255, 0.4);
+}
+/* 首行缩进 */
+.shsj {
+  text-indent: 2em;
+}
