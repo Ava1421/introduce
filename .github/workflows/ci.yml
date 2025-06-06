@@ -2,9 +2,9 @@ name: CI
  
 on:
   push:
-分支: [ main ]
+    branches: [ main ]
   pull_request:
-分支: [ main ]
+    branches: [ main ]
  
 jobs:
   build-and-test:
