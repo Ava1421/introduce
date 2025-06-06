@@ -17,7 +17,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # 使用你需要的 Node.js 版本
+        node-version: '18.16.0' # 使用你需要的 Node.js 版本
         cache: 'pnpm' # 使用 pnpm 作为包管理器的缓存
  
     - name: Install dependencies with pnpm
