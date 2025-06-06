@@ -24,7 +24,7 @@ jobs:
     #     version: 8
     
     # 如果使用方法1：
-    # - run: npm install -g pnpm
+    - run: npm install -g pnpm
     
     - run: pnpm install # 现在可以正常使用pnpm命令
     - run: pnpm run build
