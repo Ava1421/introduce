@@ -13,7 +13,6 @@ jobs:
     - uses: actions/checkout@v4
     
     - run: npm install -g pnpm
-    - run: npm install
     
     - run: pnpm install # 现在可以正常使用pnpm命令
     - run: pnpm run build
